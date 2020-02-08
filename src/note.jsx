@@ -1,10 +1,16 @@
 import React from "react";
-function Note() {
+//import Notes from "./notes.js";
+function Create(Note) {
   return (
     <div className="note">
-      <h1>This is heading</h1>
-      <p>This is the content</p>
+    <h1>{Note.title}</h1>
+  <p>{Note.content}</p>
     </div>
   );
 }
-export default Note;
+//const Ans = Notes.map(Create);
+//console.log(Note);
+//const arr=[2,3,4,6,6];
+
+//console.log(Notes[0].content);
+export default Create;
