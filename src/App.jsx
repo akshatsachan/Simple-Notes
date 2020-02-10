@@ -2,13 +2,13 @@ import React from "react";
 import Header from "./header.jsx";
 import Footer from "./footer.jsx";
 import Create from "./note.jsx";
-import notes from "./notes.js";
+
+import CreateArea from "./CreateArea.jsx";
 function App() {
   return (
     <div>
       <Header />
-      {notes.map((note)=>
-{return <Create key={note.key} title={note.title} content={note.content}/>})}
+      <CreateArea/>
       <Footer />
     </div>
   );
