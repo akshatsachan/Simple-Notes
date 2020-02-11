@@ -5,7 +5,7 @@ function Create(props) {
     <div className="note">
     <h1>{props.title}</h1>
     <p>{props.data}</p>
-    <button>DELETE</button>
+    <button onClick={()=>props.del(props.id)}>DELETE</button>
     </div>
   );
 }

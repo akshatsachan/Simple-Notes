@@ -15,14 +15,24 @@ function App() {
         return [...prev,content];
       }
     );
-    console.log(notes);
+    
+    //console.log(notes);
+  }
+  function deleter(id){
+    setNotes(
+      prev=>{
+        return notes.filter((value,index)=>
+          {return id!==index;}
+        )
+      }
+    )
   }
   return (
     <div>
       <Header />
       <CreateArea funion={adder}/>
-      {notes.map(note=>{
-        return <Create title={note.title} data={note.data}/>
+      {notes.map((note,index)=>{
+        return <Create id={index} key={index} title={note.title} data={note.data} del={deleter}/>
       })}
       <Footer />
     </div>
