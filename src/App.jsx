@@ -7,18 +7,12 @@ import CreateArea from "./CreateArea.jsx";
 function App() {
   
   
-  const [notes,setNotes] = useState({
-    titles:[],
-    datas:[]
-  })
+  const [notes,setNotes] = useState([]);
   function adder(content){
     setNotes(
       prev=>
       {
-        return {
-          titles:[...prev.titles,content.title],
-          datas:[...prev.datas,content.data]
-        };
+        return [...prev,content];
       }
     );
     console.log(notes);
@@ -27,7 +21,9 @@ function App() {
     <div>
       <Header />
       <CreateArea funion={adder}/>
-      <Create/>
+      {notes.map(note=>{
+        return <Create title={note.title} data={note.data}/>
+      })}
       <Footer />
     </div>
   );
