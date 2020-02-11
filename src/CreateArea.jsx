@@ -16,21 +16,14 @@ function CreateArea(props) {
           };
       });
   }
-  /*function adder(){
-    setTitarr(prev=>{
-      return (
-        [...prev,title]
-    );
-    });
-    setDataarr(prev=>{
-      return(
-        [...prev,data]
-      );
-    })
-  }*/
+  
  function submitter(event){
     event.preventDefault();
     props.funion(content);
+    setContent({
+      title:"",
+      data:""
+    })
  }
   return (
     <div>
