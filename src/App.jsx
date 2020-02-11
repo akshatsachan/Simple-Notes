@@ -5,17 +5,23 @@ import Create from "./note.jsx";
 
 import CreateArea from "./CreateArea.jsx";
 function App() {
-  const [titarr,setTitarr]=useState([]);
-  const [dataarr,setDataarr]=useState([]);
-  function adder(title,data){
-      setTitarr(prev=>{
-        return [...prev,title];
-      });
-      setDataarr(prev=>{
-        return [...prev,data];
-      })
-      console.log(titarr);
-      console.log(dataarr);
+  
+  
+  const [notes,setNotes] = useState({
+    titles:[],
+    datas:[]
+  })
+  function adder(content){
+    setNotes(
+      prev=>
+      {
+        return {
+          titles:[...prev.titles,content.title],
+          datas:[...prev.datas,content.data]
+        };
+      }
+    );
+    console.log(notes);
   }
   return (
     <div>

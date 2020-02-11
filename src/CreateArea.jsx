@@ -2,13 +2,19 @@ import React,{useState} from "react";
 
 function CreateArea(props) {
  
-  const [title,setTitle] = useState("");
-  const [data,setData]= useState("");
-  function titler(event){
-    setTitle(event.target.value);
-  }
-  function dater(event){
-    setData(event.target.value);
+  const [content,setContent]=useState({
+    title:"",
+    data:""
+  });
+  function setter(event){
+    const {name,value} = event.target;
+    setContent(prev=>
+      {
+          return {
+            ...prev,
+            [name]:value
+          };
+      });
   }
   /*function adder(){
     setTitarr(prev=>{
@@ -24,15 +30,13 @@ function CreateArea(props) {
   }*/
  function submitter(event){
     event.preventDefault();
-    props.funion(title,data);
-    setTitle("");
-    setData("");
+    props.funion(content);
  }
   return (
     <div>
       <form>
-        <input name="title" placeholder="Title" onChange={titler} value={title}/>
-        <textarea name="content" placeholder="Take a note..." rows="3" onChange={dater} value={data}/>
+        <input name="title" placeholder="Title" onChange={setter} value={content.title}/>
+        <textarea name="data" placeholder="Take a note..." rows="3" onChange={setter} value={content.data}/>
         <button onClick={submitter}>Add</button>
       </form>
     </div>
