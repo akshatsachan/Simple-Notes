@@ -47,6 +47,8 @@ footer p {
 .note h1 {
   font-size: 1.1em;
   margin-bottom: 6px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
 }
 .note p {
   font-size: 1.1em;
