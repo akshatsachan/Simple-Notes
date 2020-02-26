@@ -1,24 +1,30 @@
 {
-  "name": "keeper-app-part-1-starting",
+  "name": "noteKeeperApp",
   "version": "1.0.0",
   "description": "",
   "keywords": [],
-  "main": "src/index.js",
+  "main": "./src/main.js",
   "dependencies": {
     "@material-ui/core": "^4.9.2",
     "@material-ui/icons": "^4.9.1",
+    "electron-is-dev": "^1.1.0",
     "react": "16.8.6",
     "react-dom": "16.8.6",
     "react-scripts": "3.2.0"
   },
   "devDependencies": {
+    "electron": "^8.0.2",
+    "electron-builder": "^22.3.2",
     "typescript": "3.3.3"
   },
   "scripts": {
-    "start": "react-scripts start",
+    
+    "start": "BROWSER=none react-scripts start",
+    "electron": "electron .",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "test": "react-scripts test",
     "eject": "react-scripts eject"
+    
   },
   "browserslist": [
     ">0.2%",
