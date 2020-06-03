@@ -10,7 +10,7 @@
     "electron-is-dev": "^1.1.0",
     "react": "16.8.6",
     "react-dom": "16.8.6",
-    "react-scripts": "3.2.0"
+    "react-scripts": "^3.2.0"
   },
   "devDependencies": {
     "electron": "^8.0.2",
@@ -18,13 +18,11 @@
     "typescript": "3.3.3"
   },
   "scripts": {
-    
     "start": "BROWSER=none react-scripts start",
     "electron": "electron .",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
-    
   },
   "browserslist": [
     ">0.2%",
