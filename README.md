@@ -1,4 +1,4 @@
-# React-App-Project
+# Simple-Notes
  A project to implement functionalities of React.js.<br>
  Steps to run the project on local server:
 1. run `npm install` <br>
