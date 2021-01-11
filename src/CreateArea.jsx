@@ -30,7 +30,7 @@ function CreateArea(props) {
       <form>
         <input name="title" placeholder="Title" onChange={setter} value={content.title}/>
         <textarea name="data" placeholder="Take a note..." rows="3" onChange={setter} value={content.data}/>
-        <button onClick={submitter}>Add</button>
+        <button onClick={submitter} style ={{fontSize:"30px"}}>+</button>
       </form>
     </div>
   );
