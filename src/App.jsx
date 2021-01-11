@@ -6,8 +6,13 @@ import Create from "./note.jsx";
 import CreateArea from "./CreateArea.jsx";
 function App() {
   
-  
-  const [notes,setNotes] = useState([]);
+  let savedNotes = [];
+  if(localStorage.getItem("notes")!=null)
+  {
+      savedNotes = JSON.parse(localStorage.getItem("notes"));
+  }
+
+  const [notes,setNotes] = useState(savedNotes);
   function adder(content){
     setNotes(
       prev=>
@@ -27,6 +32,7 @@ function App() {
       }
     )
   }
+  localStorage.setItem("notes",JSON.stringify(notes));
   return (
     <div>
       <Header />
