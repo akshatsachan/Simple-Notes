@@ -4,7 +4,7 @@ var year = curr.getFullYear();
 function Footer() {
   return (
     <footer>
-      <p>Copyright Akshat Sachan. {year}</p>
+      <p>Copyright <a href="https://github.com/akshatsachan" target="_blank" rel="noopener noreferrer">Akshat Sachan</a>. {year}</p>
     </footer>
   );
 }

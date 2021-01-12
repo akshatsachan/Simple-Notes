@@ -33,7 +33,7 @@ footer {
 }
 
 footer p {
-  color: #ccc;
+  color: #7F7F7F;
 }
 .note {
   background: #fff;
@@ -103,3 +103,7 @@ form button {
   outline: none;
 }
 
+a{
+  text-decoration: none;
+  color:#17a2b8;
+}
